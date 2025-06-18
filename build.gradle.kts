@@ -26,6 +26,14 @@ kotlin {
     jvm()
     jvmToolchain(8)
 
+    sourceSets {
+        commonTest {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+    }
+
     js {
         nodejs {
             testTask {
